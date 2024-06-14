@@ -1,9 +1,11 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors=require('cors')
+
 const app = express()
 const Product = require("./model");
 app.use(express.json());
-
+app.use(cors())
 
 let url = require('./url')
 mongoose.connect(url,{ dbName: "miniproject" }).then(() => {
