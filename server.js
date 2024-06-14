@@ -15,7 +15,7 @@ mongoose.connect(url,{ dbName: "miniproject" }).then(() => {
   );
 
 app.get('/',async(req,res)=>{
-    const productss = await Products.find()
+    const productss = await Product.find()
     return res.json(productss)
 })
 
